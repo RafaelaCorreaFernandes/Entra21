@@ -4,37 +4,28 @@ import java.util.Scanner;
 
 public class DesvioCondicional {
 	public static void main(String[] args) {
-		
-		//exercicio1();	
-		//exercicio2();
-		exercicio3();
-	
+		// exercicio1();
+		// exercicio2();
+		// exercicio3();
+		exercicio4();
 	}
 
-		
-	
-
-	
-
-
-
-
 	static void exercicio1() {
-		Scanner entradaUser = new Scanner (System.in);
-			
-			System.out.println("Informe um número ");
-			int numero = entradaUser.nextInt();
-			
-			if(numero % 2 == 0) {
-				System.out.println("par ");
-			}
-			
-			else {
-				System.out.println("impar ");
-			}
-	        
+		Scanner entradaUser = new Scanner(System.in);
+
+		System.out.println("Informe um número ");
+		int numero = entradaUser.nextInt();
+
+		if (numero % 2 == 0) {
+			System.out.println("par ");
 		}
-	
+
+		else {
+			System.out.println("impar ");
+		}
+
+	}
+
 	static void exercicio2() {
 		Scanner entradaUser = new Scanner (System.in);
 		
@@ -50,8 +41,9 @@ public class DesvioCondicional {
 		if (numero1 < numero2) {
 			System.out.println(numero1 + " é menor que " + numero2);
 		}
-		
-		static void exercicio3() {
+	}
+
+	static void exercicio3() {
 		 Scanner sc = new Scanner (System.in);
 		 
 		 System.out.println("Informe um numero ");
@@ -63,24 +55,23 @@ public class DesvioCondicional {
 			 System.out.println("Esse número é negativo ");
 		 }
 		 if (numero == 0) {
-			 System.out.println("Esse número é igual a 0 ");
-			 
-	
+			 System.out.println("Esse número é igual a 0 ");				
 			 }
-		
-		 
-		 
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
- 
+
+	static void exercicio4() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Informe sua nota: ");
+		int nota = sc.nextInt();
+		if (nota > 6) {
+			System.out.println("Aprovado ");
+		}
+		if (nota < 6) {
+			System.out.println("Reprovado ");
+		}
+	}
+
 }
+
+
