@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class aula08 {
 
 	public static void main(String[] args) {
-
+    
 		
 		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
 		
@@ -34,9 +36,20 @@ public class aula08 {
 	
 		 
 		 //desafioDobro();
-		 parImpar();
+		 //parImpar();
+		 
+		 dividir();
+		   
+		 
+		  
+		 
 	}
 		
+		 private static void dividir() {
+		// TODO Auto-generated method stub
+		
+	}
+
 		 static void desafioDobro () {
 			Scanner input = new Scanner(System.in);
 			int[] numeros = new int[5];
@@ -67,16 +80,35 @@ public class aula08 {
 				else {
 					System.out.println(num + " impar");
 				}
+				
+				
+				
+				double precoPizza = 150.00;
+				int numeroPessoas = 10;
+				System.out.println(dividir(precoPizza, numeroPessoas));
 			}
 			 
+			static double dividir(double numero, int divisor) {
+			    if(divisor == 0) {
+			    	JOptionPane.showMessageDialog(null, "nao pode dividir por zero");
+			    	return 0.0;
+			    }
+				return numero / divisor;
+			}
 			
 			 }
-			 
+		 
+		
+		 }
+
+       
+		 
+		
 			 
 			 
 		
 			  
-		 }
+		 
 	
 
 	
