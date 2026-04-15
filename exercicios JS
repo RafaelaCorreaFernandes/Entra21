@@ -1,0 +1,73 @@
+function parImpar() {
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Digite um número: ", function(resposta) {
+    let numero = parseInt(resposta);
+
+    if (numero % 2 === 0) {
+        console.log("O número é par!");
+    } else {
+        console.log("O número é ímpar!");
+    }
+
+    rl.close();
+});
+}
+
+//parImpar();
+
+function idadeVoto() {
+    const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Digite sua idade ', function(resposta) {
+    let numero = parseInt(resposta);
+
+    if(numero === 16, numero > 16) {
+        console.log("Você pode votar! ");
+    } else {
+        console.log("Você não pode votar! :( ");
+    }
+    rl.close();
+});
+}
+
+//idadeVoto();
+
+function nota() {
+    const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Informe sua nota ", function(resposta) {
+    let numero = parseInt(resposta);
+
+    if(numero === 0, numero > 0, numero < 4, numero === 4) {
+        console.log("Insuficiente ");
+    }
+    if(numero === 5, numero > 5, numero < 6, numero === 6) {
+        console.log("Regular ");
+    }
+    if(numero === 7, numero > 7, numero < 8, numero === 8) {
+        console.log("Bom ");
+    }
+    if(numero === 9, numero > 9, numero === 10) {
+        console.log("Excelente ");
+    }
+    rl.close();
+})
+}
+
+nota();
