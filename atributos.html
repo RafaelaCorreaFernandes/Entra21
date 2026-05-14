@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <style>
+     
+
+        body {
+            padding-top: 80px;
+              display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+        }
+
+       
+
+        h1 {
+         text-align: center;
+         margin-top: 10px;
+         background-color: rgb(43, 32, 201);
+         border: groove rgb(15, 5, 153);
+         color: white;
+         width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 20px;
+        border-radius: 20px;
+        }
+
+          .linha {
+          display: flex;
+         flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 80px
+        }
+ 
+        .assento {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+ 
+        .letra {
+            width: 20px;
+            font-weight: bold;
+        }
+
+        
+    .legenda-container {
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: fit-content;
+  margin-top: 40px;
+  
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.fundo-label {
+  color: #353333;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.legenda-itens {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.box {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.disponivel {
+  border: 1px solid #aaa;
+  background-color: #fff;
+}
+
+.selecionado {
+  background-color: blue;
+}
+
+.ocupado {
+  background-color: #b0a9a0;
+}
+
+.acompanhante {
+  background-color: #1a2e4a;
+  color: white;
+  font-size: 10px;
+}
+
+.cadeirante {
+  background-color: #1a2e4a;
+  color: white;
+  font-size: 14px;
+}
+
+button {
+    transition: 0.5s;
+}
+button:hover{
+    transform: scale(1.1);
+}
+
+span {
+  color: #353333;
+}
+.selecionar-ingresso button{
+    outline: none;
+    font-size: large;
+    text-align: center;
+         margin-top: 10px;
+         color: white;
+         width: fit-content;
+         margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+          border: 1px solid #ccc;
+         background: linear-gradient(to right, #000d42 37%, #0055ff 100%);
+    border-radius: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+        
+}
+
+.tela-container{
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #000d42 37%, #0055ff 100%);
+   border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: 600px;
+  text-align-last: center;
+}
+
+#assentos-selecionados {
+  color: #353333;
+  margin-top: 20px;
+  font-size: larger;
+  font-weight: bold;
+}
+       
+
+    </style>
+</head>
+
+<body>
+
+  <img src="img/ChatGPT Image 14 de mai. de 2026, 15_18_20.png"
+  style="position: fixed; left: 10px; top: 50%; transform: translateY(-50%); width: 350px; margin-left: 150px;"
+/>
+
+<div style="margin-bottom: 20px; font-weight: bold;">
+       <h1>Escolha os assentos</h1>
+    </div>
+
+     <div class="tela-container">TELA</div>
+ 
+    <div class="linha">
+        <span class="letra">A</span>
+        <button class="assento">1</button>
+        <button class="assento">2</button>
+        <button class="assento">3</button>
+        <button class="assento">4</button>
+        <button class="assento">5</button>
+         <button class="assento">6</button>
+          <button class="assento">7</button>
+    </div>
+ 
+    <div class="linha">
+        <span class="letra">B</span>
+        <button class="assento">1</button>
+        <button class="assento">2</button>
+        <button class="assento">3</button>
+        <button class="assento">4</button>
+        <button class="assento">5</button>
+         <button class="assento">6</button>
+          <button class="assento">7</button>
+    </div>
+ 
+    <div class="linha">
+        <span class="letra">C</span>
+        <button class="assento">1</button>
+        <button class="assento">2</button>
+        <button class="assento">3</button>
+        <button class="assento">4</button>
+        <button class="assento">5</button>
+         <button class="assento">6</button>
+          <button class="assento">7</button>
+
+    </div>
+
+     <div class="linha">
+        <span class="letra">D</span>
+        <button class="assento">1</button>
+        <button class="assento">2</button>
+        <button class="assento">3</button>
+        <button class="assento">4</button>
+        <button class="assento">5</button>
+         <button class="assento">6</button>
+          <button class="assento">7</button>
+
+    </div>
+
+     <div class="linha">
+        <span class="letra">E</span>
+        <button class="assento">1</button>
+        <button class="assento">2</button>
+        <button class="assento">3</button>
+        <button class="assento">4</button>
+        <button class="assento">5</button>
+         <button class="assento">6</button>
+          <button class="assento">7</button>
+
+    </div>
+
+   
+
+
+    <div class="legenda-container">
+  <div class="fundo-label">FUNDO DA SALA</div>
+  <div class="legenda-itens">
+    <div class="legenda-item">
+      <div class="box disponivel"></div>
+      <span>Disponível</span>
+    </div>
+    <div class="legenda-item">
+      <div class="box selecionado"></div>
+      <span>Selecionado</span>
+    </div>
+    <div class="legenda-item">
+      <div class="box ocupado"></div>
+      <span>Ocupado</span>
+    </div>
+    <div class="legenda-item">
+      <div class="box acompanhante">AC</div>
+      <span>Acompanhante</span>
+    </div>
+    <div class="legenda-item">
+      <div class="box cadeirante">♿</div>
+      <span>Cadeirante</span>
+    </div>
+  </div>
+
+</div>
+
+<div id="assentos-selecionados">Assentos selecionados: Nenhum</div>
+
+<div class="selecionar-ingresso">
+    <button>Selecionar Ingresso →</button>
+  </div>
+
+ 
+    <script>
+       const assentos = document.querySelectorAll('.assento');
+
+    function atualizarInfo() {
+  const selecionados = [];
+
+  assentos.forEach(assento => {
+    if (assento.style.backgroundColor === 'blue') {
+      const letra = assento.closest('.linha').querySelector('.letra').textContent;
+      const numero = assento.textContent;
+      selecionados.push(letra + numero);
+    }
+  });
+
+  const info = document.getElementById('assentos-selecionados');
+  if (selecionados.length === 0) {
+    info.textContent = 'Assentos selecionados: nenhum';
+  } else {
+    info.textContent = 'Assentos selecionados: ' + selecionados.join(', ');
+  }
+}
+
+assentos.forEach(assento => {
+  assento.addEventListener('click', () => {
+    if (assento.style.backgroundColor === 'blue') {
+      assento.style.backgroundColor = '';
+      assento.style.color = '';
+    } else {
+      assento.style.backgroundColor = 'blue';
+      assento.style.color = 'white';
+    }
+
+    atualizarInfo(); // atualiza o texto toda vez que clicar
+  });
+});
+    </script>
+</body>
+</html>
