@@ -1,115 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4ff;
-    color: #1a1a2e;
-    padding: 40px 20px;
-}
-
-h1 {
-    color: #1a4fba;
-    font-size: 30px;
-    margin-bottom: 20px;
-    
-    padding-left: 12px;
-}
-
-/* ---- FORMULÁRIO ---- */
-
-.container-cadastro {
-    background-color: #ffffff;
-    border: 1px solid #c5d5f5;
-    border-radius: 10px;
-    padding: 28px;
-    max-width: 480px;
-    margin-bottom: 40px;
-}
-
-.cadastro {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-label {
-    font-size: 13px;
-    font-weight: bold;
-    color: #1a4fba;
-}
-
-input {
-    padding: 10px 14px;
-    border: 1px solid #c5d5f5;
-    border-radius: 6px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-input:focus {
-    border-color: #1a4fba;
-}
-
-button {
-    margin-top: 10px;
-    padding: 12px;
-    background-color: #1a4fba;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button:hover {
-    background-color: #1340a0;
-}
-
-/* ---- TABELA ---- */
-
-.container-clientes {
-    background-color: #ffffff;
-    border: 1px solid #c5d5f5;
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 700px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead {
-    background-color: #1a4fba;
-    color: #ffffff;
-}
-
-th {
-    padding: 12px 16px;
-    text-align: left;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-td {
-    padding: 12px 16px;
-    font-size: 14px;
-    border-bottom: 1px solid #e8eeff;
-}
-
-tbody tr:hover {
-    background-color: #f0f4ff;
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
-}
+  * { margin: 0;
+     padding: 0; 
+     box-sizing: border-box; }
+  
+  body { 
+    font-family: Arial, sans-serif; 
+    background: #f0f4ff; }
+  
+    nav.menu { display: flex;
+         gap: 16px; background: #1a4fba; 
+         padding: 16px 24px; }
+  
+         .menu-btn { color: #1a4fba; background: #fff; text-decoration: none; font-size: 15px; font-weight: bold; padding: 10px 28px; border-radius: 6px; cursor: pointer; border: none; transition: background 0.2s; }
+  .menu-btn:hover { background: #e0e8ff; }
+  .page { display: none; padding: 32px 24px; }
+  .page.active { display: block; }
+  h1 { color: #1a4fba; font-size: 22px; margin-bottom: 20px; border-left: 4px solid #1a4fba; padding-left: 12px; }
+  .container-cadastro { background: #fff; border: 1px solid #c5d5f5; border-radius: 10px; padding: 28px; max-width: 480px; }
+  .cadastro { display: flex; flex-direction: column; gap: 10px; }
+  label { font-size: 13px; font-weight: bold; color: #1a4fba; }
+  input { padding: 10px 14px; border: 1px solid #c5d5f5; border-radius: 6px; font-size: 14px; outline: none; }
+  input:focus { border-color: #1a4fba; }
+  .btn-cadastrar { margin-top: 10px; padding: 12px; background: #1a4fba; color: #fff; border: none; border-radius: 6px; font-size: 15px; font-weight: bold; cursor: pointer; }
+  .btn-cadastrar:hover { background: #1340a0; }
+  .container-clientes { background: #fff; border: 1px solid #c5d5f5; border-radius: 10px; overflow: hidden; max-width: 700px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: #1a4fba; color: #fff; }
+  th { padding: 12px 16px; text-align: left; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+  td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid #e8eeff; }
+  tbody tr:hover { background: #f0f4ff; }
+  tbody tr:last-child td { border-bottom: none; }
+  .empty { text-align: center; color: #888; padding: 24px; font-size: 14px; }

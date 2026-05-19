@@ -7,42 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cadastro de Clientes</h1>
-    <div class="container-cadastro">
-      
-        <form class="cadastro">
-        <label for="">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome">
-        <label for="">Email</label>
-        <input type="email" id="email" name="email" placeholder="Seu E-mail">
-        <label for="">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+    <nav class="menu">
+  <button class="menu-btn" onclick="irPara('cadastro')">Cadastro</button>
+  <button class="menu-btn" onclick="irPara('clientes')">Agenda</button>
+</nav>
 
-         <button type="button" onclick="cadastrar()">Cadastrar</button>
-        </form>
+<div id="cadastro" class="page active">
+  <h1>Cadastro de Clientes</h1>
+  <div class="container-cadastro">
+    <div class="cadastro">
+      <label>Nome:</label>
+      <input type="text" id="nome" placeholder="Seu nome">
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Seu e-mail">
+      <label>Telefone:</label>
+      <input type="tel" id="telefone" placeholder="Seu telefone">
+      <button class="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
+    </div>
+  </div>
+</div>
 
+<div id="clientes" class="page">
+  <h1>Lista de Clientes</h1>
+  <div class="container-clientes">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-body">
+        <tr><td colspan="3" class="empty">Nenhum cliente cadastrado ainda.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+    <script src="cadastro.js">
         
-    
-    </div>
-
-    <h1>Lista de Clientes</h1>
-
-    <div class="container-clientes">
-       <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-            </tr>
-        </thead>
-        <tbody id="tabela-body">
-
-        </tbody>
-       </table>
-    </div>
-   
-    <script src="cadastro.js"></script>
+    </script>
 
 </body>
 </html>
