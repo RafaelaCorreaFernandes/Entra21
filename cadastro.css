@@ -58,12 +58,14 @@ h1 {
   border-radius: 10px;
   padding: 28px;
   max-width: 480px;
+  
 }
 
 .cadastro {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 
 label {
@@ -157,13 +159,14 @@ input:focus {
 }
 
 .btn-excluir {
-  margin-top: 10px;
-  padding: 12px;
+  flex: 1;
+  margin-top: 0px;
+  padding: 10px;
   background: #3a3a3a;
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -187,4 +190,24 @@ input:focus {
   cursor: pointer;
   padding: 0;
   font-weight: bold;
+}
+
+
+
+/* Estilo do botão Editar */
+.btn-editar {
+  flex: 1;
+  padding: 10px;
+  background: #555555; /* Um tom cinza médio para diferenciar do Excluir */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-editar:hover {
+  background: #3a3a3a;
 }
