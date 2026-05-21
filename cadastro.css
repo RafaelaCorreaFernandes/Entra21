@@ -44,7 +44,7 @@ nav.menu {
 
 h1 {
   color: #2b2b2b;
-  font-size: 22px;
+  font-size: 30px;
   margin-bottom: 20px;
   border-left: 4px solid #555;
   padding-left: 12px;
@@ -89,7 +89,7 @@ input:focus {
 .btn-cadastrar {
   margin-top: 10px;
   padding: 12px;
-  background: #3a3a3a;
+  background: #6945ad;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -99,7 +99,7 @@ input:focus {
 }
 
 .btn-cadastrar:hover {
-  background: #1f1f1f;
+  background: #ac63ff;
 }
 
 /* --- CARDS --- */
@@ -124,7 +124,7 @@ input:focus {
 }
 
 .card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(139, 67, 255, 0.438);
   transform: scale(1.1);
   transition: 0.3s ease;
 }
@@ -162,7 +162,7 @@ input:focus {
   flex: 1;
   margin-top: 0px;
   padding: 10px;
-  background: #3a3a3a;
+  background: #a00f0f;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -172,7 +172,8 @@ input:focus {
 }
 
 .btn-excluir:hover {
-  background: #1f1f1f;
+  background: #e91313
+
 }
 
 .aviso {
@@ -190,6 +191,11 @@ input:focus {
   cursor: pointer;
   padding: 0;
   font-weight: bold;
+  
+}
+
+.btn-retorno:hover {
+  color: grey;
 }
 
 
@@ -198,7 +204,7 @@ input:focus {
 .btn-editar {
   flex: 1;
   padding: 10px;
-  background: #555555; /* Um tom cinza médio para diferenciar do Excluir */
+  background: #1f8611; /* Um tom cinza médio para diferenciar do Excluir */
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -209,5 +215,33 @@ input:focus {
 }
 
 .btn-editar:hover {
-  background: #3a3a3a;
+  background: #1ead11;
+}
+
+.card-detalhes {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  border-top: 1px solid #d8d8d8;
+  padding-top: 8px;
+}
+
+.card-detalhes.aberto {
+  display: flex;
+}
+
+.btn-detalhes {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.btn-detalhes:hover {
+  color: #444;
 }

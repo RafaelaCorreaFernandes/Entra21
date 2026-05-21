@@ -24,6 +24,13 @@
         <input type="email" id="email" placeholder="Seu e-mail">
         <label>Telefone:</label>
         <input type="tel" id="telefone" placeholder="Seu telefone">
+        <label>CEP:</label>
+        <input type="text" id="cep" placeholder="Ex: 89012-170" onblur="buscarLogradouro()">
+        <label>Rua:</label>
+        <input type="text" id="rua" placeholder="Preenchido automaticamente" onblur="buscarLogradouro()">
+
+<label>Cidade:</label>
+<input type="text" id="cidade" placeholder="Preenchida automaticamente" onblur="buscarLogradouro()">
         <button class="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
         <p id="aviso" class="aviso"></p>
       </div>
