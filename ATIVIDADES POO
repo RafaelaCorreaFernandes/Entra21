@@ -1,0 +1,113 @@
+package atividades_0107;
+
+public class Produto {
+    private String nome;
+    private int quantidade;
+    private double preco;
+
+//construtor 
+  public Produto(String nome, int quantidade, double preco) {
+	this.nome = nome;
+	this.quantidade = quantidade;
+	this.preco = preco;
+}
+
+ public void aumentarEstoque(int quantidade) {
+	this.quantidade = this.quantidade + quantidade;
+  }
+
+  public void diminuirEstoque(int quantidade) {
+	this.quantidade = this.quantidade - quantidade;
+   }
+
+
+  public double calcularValorTotal() {
+	return preco * quantidade;
+  }
+
+  public void exibirDados() {
+	  System.out.println("Nome: " + nome);
+	  System.out.println("Estoque: " + quantidade);
+	  System.out.println("Preço: " + preco);
+	  
+  }
+}
+
+package atividades_0107;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	static ArrayList<Produto> produtos = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+    	int opcao;
+
+    	do {
+    	    System.out.println("===== MENU =====");
+    	    System.out.println("1 - Cadastrar produto");
+    	    System.out.println("2 - Aumentar estoque");
+    	    System.out.println("3 - Diminuir estoque");
+    	    System.out.println("4 - Calcular valor total");
+    	    System.out.println("5 - Exibir dados");
+    	    System.out.println("0 - Sair");
+    	    System.out.print("Escolha uma opção: ");
+    	    opcao = sc.nextInt();
+
+    	    switch (opcao) {
+    	        case 1:
+    	            System.out.println("Nome do produto: ");
+    	            sc.nextLine();
+    	            String nome = sc.nextLine();
+    	            
+    	            System.out.println("Quantidade: ");
+    	            int quantidade = sc.nextInt();
+    	            
+    	            System.out.println("Preço: ");
+    	            double preco = sc.nextDouble();
+    	            
+    	            Produto novoProduto = new Produto(nome, quantidade, preco);
+    	            produtos.add(novoProduto);
+    	            System.out.println("Produto cadastrado com sucesso");
+    	            break;
+    	     
+    	        case 2:
+    	            System.out.println("Índice do produto (0 a " + (produtos.size() - 1) + "): ");
+    	            int indiceAumentar = sc.nextInt();
+    	            System.out.println("Quantidade a aumentar: ");
+    	           
+    	            int qtdAumentar = sc.nextInt();
+    	            produtos.get(indiceAumentar).aumentarEstoque(qtdAumentar);
+    	            System.out.println("Estoque aumentado! ");
+    	            break;
+    	        case 3:
+    	            System.out.print("Índice do produto (0 a " + (produtos.size() - 1) + "): ");
+    	            int indiceDiminuir = sc.nextInt();
+    	            System.out.print("Quantidade a diminuir: ");
+    	            int qtdDiminuir = sc.nextInt();
+    	            produtos.get(indiceDiminuir).diminuirEstoque(qtdDiminuir);
+    	            System.out.println("Estoque diminuído!");
+    	            break;
+    	        case 4:
+    	            System.out.print("Índice do produto (0 a " + (produtos.size() - 1) + "): ");
+    	            int indiceValor = sc.nextInt();
+    	            double total = produtos.get(indiceValor).calcularValorTotal();
+    	            System.out.println("Valor total: " + total);
+    	            break;
+    	        case 5:
+    	            System.out.print("Índice do produto (0 a " + (produtos.size() - 1) + "): ");
+    	            int indiceExibir = sc.nextInt();
+    	            produtos.get(indiceExibir).exibirDados();
+    	            break;
+    	        case 0:
+    	            System.out.println("Saindo...");
+    	            break;
+    	        default:
+    	            System.out.println("Opção inválida!");
+    	    }
+
+    	} while (opcao != 0);
+    }
+}
+
