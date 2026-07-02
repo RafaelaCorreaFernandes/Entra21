@@ -1,0 +1,54 @@
+package atividades_0107;
+
+public class MainContaBancaria {
+	 public static void main(String[] args) {
+	        ContaBancaria conta = new ContaBancaria(1, "Rafaela", 0);
+
+	        conta.Depositar(1000);
+	        conta.Sacar(300);
+	        conta.Sacar(900);
+
+	        conta.exibirDados();
+	    }
+	 
+	 
+}
+package atividades_0107;
+
+public class ContaBancaria {
+   private int numero;
+   private String titular;
+   private double saldo;
+   
+   public ContaBancaria(int numero, String titular, double saldo) {
+	   this.numero = numero;
+	   this.titular = titular;
+	   this.saldo = saldo;
+	   }
+   
+   public double Depositar(double valor) {
+    this.saldo += valor;
+    return saldo;
+   }
+   
+   public double Sacar(double valor) {
+	  if (valor <= this.saldo) {
+		  this.saldo -= valor;
+		  
+	  } else {
+		  System.out.println("Saldo insuficiente ");
+	  }
+	  return saldo;
+   }
+   
+   public double consultarSaldo() {
+	   return saldo;
+   }
+   
+   public void exibirDados() {
+       System.out.println("Número da conta: " + numero);
+       System.out.println("Titular: " + titular);
+       System.out.println("Saldo: " + saldo);
+   }
+   
+ }
